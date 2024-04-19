@@ -2,17 +2,18 @@ import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Routes,
-  Link,
-} from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
-import HomePage from "./HomePage";
-import MoviePage from "./MoviePage";
-import RewardsPage from "./RewardsPage";
+import './App.css'
+import Home from "./Pages/Home";
+import TwentyFour from "./Pages/TwentyFour";
+import TwentyThree from "./Pages/TwentyThree";
+import TwentyTwo from "./Pages/TwentyTwo";
+import TwentyOne from "./Pages/TwentyOne";
+import Twenty from "./Pages/Twenty";
+import Nineteen from "./Pages/Nineteen";
+import NavBar from "./components/Navbar";
+import MoviePage from "./Pages/MoviePage";
 
 function App() {
   return (
