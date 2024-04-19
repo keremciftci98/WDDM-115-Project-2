@@ -1,4 +1,4 @@
-const key = process.env.MOVIE_API_KEY;
+const key = process.env.REACT_APP_MOVIE_API_KEY;
 const base_uri = "https://api.themoviedb.org/3/";
 const image_uri = "https://image.tmdb.org/t/p";
 const append_to_movie = `?api_key=${key}&language=en-US`;
