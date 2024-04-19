@@ -1,7 +1,3 @@
-import logo from "./logo.svg";
-import "./App.css";
-import React from "react";
-
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import './App.css'
@@ -35,4 +31,5 @@ function App() {
     </>
   )
 }
-export default App;
+
+export default App
