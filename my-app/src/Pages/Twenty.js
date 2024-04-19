@@ -14,6 +14,7 @@ function TwentyTwo() {
     }, []);
     return (
         <Row movies={oscars} year={year} />
+    );
 
 }
 
