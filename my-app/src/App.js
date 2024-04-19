@@ -16,30 +16,23 @@ import NavBar from "./components/Navbar";
 import MoviePage from "./Pages/MoviePage";
 
 function App() {
-  return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">HomePage</Link>
-            </li>
-            <li>
-              <Link to="/MoviePage">MoviePage</Link>
-            </li>
-            <li>
-              <Link to="/RewardsPage">RewardsPage</Link>
-            </li>
-          </ul>
-        </nav>
+  const currentPath = useLocation().pathname;
+  const hideNavBar = currentPath.includes('/movie');
 
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/MoviePage" element={<MoviePage />} />
-          <Route path="/RewardsPage" element={<RewardsPage />} />
-        </Routes>
-      </div>
-    </Router>
-  );
+  return (
+    <>
+      {!hideNavBar && <NavBar />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/twenty-four" element={<TwentyFour />} />
+        <Route path="/twenty-three" element={<TwentyThree />} />
+        <Route path="/archives/2022" element={<TwentyTwo />} />
+        <Route path="/archives/2021" element={<TwentyOne />} />
+        <Route path="/archives/2020" element={<Twenty />} />
+        <Route path="/archives/2019" element={<Nineteen />} />
+        <Route path="/movie/:id" element={<MoviePage />} />
+      </Routes>
+    </>
+  )
 }
 export default App;
